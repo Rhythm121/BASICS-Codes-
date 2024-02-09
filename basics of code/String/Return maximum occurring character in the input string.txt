@@ -1,0 +1,30 @@
+Q)Return maximum occurring character in the input string?
+code-
+#include <iostream>
+#define ASCII 256
+using namespace std;
+char getmax(string str){
+int arr[ASCII]={0};
+int len=str.length();
+int max=0;
+char ans;
+for(int i=0;i<len;i++){
+    arr[str[i]]++;
+    if(max<arr[str[i]]){
+        max=arr[str[i]];
+        ans=str[i];
+    }
+}
+for(int i=0;i<len;i++){
+    cout<<"charecter"<<" "<<str[i]<<"  "<<"Frequency "<<" " <<arr[str[i]]<<endl;
+}
+return ans;
+    
+}
+int main() {
+ string s;
+ cout<<"enter the string"<<endl;
+ getline(cin,s);
+ cout<<getmax(s);
+    return 0;
+}

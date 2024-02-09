@@ -1,0 +1,33 @@
+code=
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+    int n;
+    int equilibrium=-1;
+    cin>>n;
+int arr[n];
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+}
+int leftsum[n];
+int rightsum[n];
+int sumleft=0;
+int sumright=0;
+for(int i=0;i<n;i++){
+    leftsum[i]=sumleft;
+    sumleft+=arr[i];
+}
+for(int j=n-1;j>=0;j--){
+    rightsum[j]=sumright;
+    sumright+=arr[j];
+}
+for(int i=0;i<n;i++){
+    if(leftsum[i]==rightsum[i]){
+        equilibrium=i;
+        break;
+    }
+}
+cout<<equilibrium;
+    return 0;
+}

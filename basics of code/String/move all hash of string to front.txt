@@ -1,0 +1,34 @@
+Q)Problem Statement: Write a function that accepts a string with some “#” in it. Move all the hashes to the front of the string and return the modified string.
+
+nput: Move#Hash#to#Front
+
+Output: ###MoveHashtoFront
+
+code-
+#include <iostream>
+#include <cstring>
+using namespace std;
+int movehash(string s){
+for(int i=0;i<s.length();i++){
+        
+      if(s[i]=='#'){
+          cout<<s[i];
+      } 
+    }
+    for(int j=0;j<s.length();j++){
+        if(s[j]!='#'){
+            cout<<s[j];
+        }
+    }
+
+   
+           return 0;
+    }
+    
+
+int main() {
+string s;
+cin>>s;
+movehash(s);
+    return 0;
+}

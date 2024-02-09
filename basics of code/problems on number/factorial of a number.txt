@@ -1,0 +1,29 @@
+Q)Factorial of a number itterative ?
+ 
+code= 
+#include <iostream>
+using namespace std;
+int  factorial(int n){
+int fact=1;
+if(n<0){
+    cout<<"Factorial not possible";
+}
+else if(n<=1){
+    cout<<"factorial of "<<n<<"is"<<fact;
+}else{
+    for(int i=n;i>=2;i--){
+       fact=fact*i;
+    }
+    cout<<"factorial value of "<<n<<" is "<<fact<<endl;
+    
+}
+
+return -1;
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<factorial(n);
+    
+    return 0;
+}

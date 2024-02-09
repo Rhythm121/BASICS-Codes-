@@ -1,0 +1,29 @@
+Q)Fibonacci series upto nth term ?
+code-
+0 1 1 2 3 5 8 13 .. ........
+nth=(n-1)th+(n-2)th value
+bace case is - position of 0th index is 0 and position 1 is 1.
+//sloved using recurssion 
+
+#include <iostream>
+using namespace std;
+int solve(int n){
+    if(n==0){
+        return 0;
+    }else if(n==1){
+        return 1;
+    }else 
+    {
+        return solve(n-1)+solve(n-2);
+    }
+}
+int main() {
+  int n;
+  cin>>n;
+  cout<<solve(n);
+    
+return 0;
+
+NOTE- IF YOU GIVE Nth position of the series the code will give you value of that Nth position in fibonacci series 
+ex=n=7
+  fibonacci number is 13. 

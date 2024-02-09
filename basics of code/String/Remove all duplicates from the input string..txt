@@ -1,0 +1,23 @@
+Q)Remove all duplicates from the input string?
+
+code-
+#include <iostream>
+using namespace std;
+int main() {
+ string str,res="";
+ int i,j;
+ cout<<"enter the line of string"<<endl;
+ getline(cin,str);
+ for(i=0;i<str.length();i++){
+     for(j=0;j<str.length();j++){
+         if(str[i]==str[j]){
+             break;
+         }
+     }
+     if(i==j){
+         res+=str[i];
+     }
+ }
+ cout<<"duplicate char removed str is :"<<endl<<res;
+    return 0;
+}

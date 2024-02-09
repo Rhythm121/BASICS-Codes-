@@ -1,0 +1,56 @@
+Q)rotating the array from the right side?
+
+
+breif-Rotate array by K elements
+
+Problem Statement: Given an array of integers, rotating array of elements by k elements either left or right.
+
+Examples:
+
+Example 1:
+Input: N = 7, array[] = {1,2,3,4,5,6,7} , k=2 , right
+Output: 6 7 1 2 3 4 5
+Explanation: array is rotated to right by 2 position .
+
+
+code-
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int rotatearrright(int arr1[],int n,int k){
+    
+     int temp[k];
+  for (int i = n - k; i < n; i++)
+  {
+    temp[i - n + k] = arr1[i];
+  }
+  for (int i = n - k - 1; i >= 0; i--)
+  {
+    arr1[i + k] = arr1[i];
+  }
+  for (int i = 0; i < k; i++)
+  {
+    arr1[i] = temp[i];
+    
+  }
+   
+    
+    return 0;   
+   }
+int main() {
+    int n;
+    cin>>n;
+    int arr1[n];
+    for(int i=0;i<n;i++){
+        cin>>arr1[i];
+    }
+    int k;
+    cin>>k;
+   rotatearrright(arr1,n,k);
+    for(int i=0;i<n;i++)
+{
+    cout<<arr1[i];
+}
+return 0;
+}

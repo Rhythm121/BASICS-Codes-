@@ -1,0 +1,32 @@
+Q)Check if given year is a leap year or not?
+
+code-
+condtions for a year to be a leap year is 
+1) if the year is divisible by 4 it is a leap year.
+2) if year is diviible by 100 and 400 bith than leap year else not .
+3)if year is not  divisible by 100 but is divisible by 4 then is leap year.
+code- #include <iostream>
+using namespace std;
+int  isleapyear(int year){
+    if(year%4==0){
+         if(year%100==0){
+             if(year%400==0){
+                 cout<<"the year is leap year";
+             }
+         }
+         else{
+             cout<<"the year is a leap year";
+         }
+    }
+    else{
+        cout<<"not a leap year";
+    }
+return 0;
+}
+int main() {
+   int num;
+    cin>>num;
+    cout<<isleapyear(num);
+    
+   
+}

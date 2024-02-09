@@ -1,0 +1,40 @@
+Q)Give a password string, find the minimum number of divisions such that total number of - decoded passwords are greater than length of each decoded password.
+
+Input: S = "PLEASESAVEME", L = 12
+
+Output: "PSV" "LEE" "ESM" "AAE"
+
+code-
+#include <iostream>
+#include<string>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    string s;
+    cout<<"input"<<" : ";
+    cin>>s;
+    cout<<s;
+    int divisions=0;
+    for(int i=n;i>0;i--){
+        if(n%i==0 && i<n/i){
+            divisions=i;
+            break;
+        }
+    }
+    cout<<"divisions are"<<" : "<<divisions<<endl;
+ int noofsub=n/divisions;
+  cout<<"no of substrings are"<<" : "<<noofsub<<endl;
+ int j;
+ int i;
+  for(int i=0;i<noofsub;i++){
+      cout<<" ";
+      for(int j=i;j<n;j=j+noofsub){
+      cout<<s[j];
+      }
+      
+      
+  }
+ 
+    return 0;
+}

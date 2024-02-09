@@ -1,0 +1,35 @@
+Q)inserting in an array ?
+code-//insertion at any position array 
+//we can only insert in a array if it has extra space to do the same
+int insert(int arr[],int n, int x,int cap,int pos ){
+    if(n==cap){
+    return n;
+    }
+    int idx=pos-1;
+    for(int i=n-1;i>=idx;i--)
+    {
+        arr[i+1]=arr[i];
+        
+    }
+    arr[idx]=x;
+        return n+1;
+}
+//insertion ends
+//insertion of element at the begining is O(N)
+//insertion of element at the end is O(1)
+
+int main(){
+    int arr[5];
+     int n=3;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int x=7;
+   
+    int cap=5;
+    int pos=2;
+    n = insert(arr, n, x, cap, pos);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+

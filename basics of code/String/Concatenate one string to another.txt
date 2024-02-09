@@ -1,0 +1,50 @@
+Q)Concatenate one string to another?
+
+code-
+//using plus operator we can concatinate the two string 
+
+1)
+#include <iostream>
+using namespace std;
+int main() {
+    //using (+) operator 
+    //space can be add between the two concatenated string using (+" "+)
+    string firstname="rhythm";
+    string lastname="rohatgi";
+    string fullname= firstname+" "+ lastname;
+    cout<<fullname;
+return 0;
+}
+
+2) //Using strcat() or append() function used to concatenate the two string 
+
+code-
+
+#include <iostream>
+#include<cstring>
+using namespace std;
+int main() {
+    //using strcat concatination function c++  
+    //space can be add between the two concatenated string using strcat(strcat(str1," "),str2);
+    char firstname[100]={'r','h','y','t','h','m'};
+    char lastname[100]={'r','o','h','a','t','g','i'};
+    strcat(strcat(firstname, " "  ),lastname);
+    cout<<firstname;
+return 0;
+}
+
+3. //using append function
+
+code-
+#include <iostream>
+#include<cstring>
+using namespace std;
+int main() {
+    //using append concatination function c++ strings   
+    //space can be add between the two concatenated string using ;
+     string str1="rhythm";
+     string str2="rohatgi";
+   str1.append(" ").append(str2);
+    cout<<str1;
+return 0;
+}

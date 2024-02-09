@@ -1,0 +1,21 @@
+Q)convert the string alphabets to uppercases?
+code-
+#include <iostream>
+#include<cstring>
+#include<string>
+using namespace std;
+int main() {
+    string c;
+    cin>>c;
+    int z;
+   z=0;
+ while(c[z]!=' '){
+     if(c[z]>='a'&&c[z]<='z'){
+         c[z]=c[z]-32;
+     }
+     z++;
+ }
+    cout<<c;
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+Q)Check if a number is armstrong number of not?
+
+code-
+#include <iostream>
+using namespace std;
+int  armstrong(int n){
+int r,sum=0;
+
+int temp=n;
+while(n>0){
+    r=n%10;
+    sum=sum+(r*r*r);
+    n=n/10;
+}
+if(temp==sum){
+    cout<<"Ther number is armstrong";
+}else{
+    cout<<"the number is not armstrong"<<endl;
+}
+return -1;
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<armstrong(n);
+    
+    return 0;
+}

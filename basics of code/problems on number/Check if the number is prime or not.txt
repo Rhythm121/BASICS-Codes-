@@ -1,0 +1,35 @@
+Q)check whether the number is prime or not ?
+
+code-
+#include <iostream>
+using namespace std;
+int  isprime(int num){
+    
+int i;
+int check=0;
+if(num==0 || num==1){
+    cout<<"the number is not prime number"<<endl;
+}else
+if(num==2){
+    cout<<"the number is the smallest prime number"<<endl;
+}else{
+for(i=1;i<=num;i++){
+    if(num%i==0){
+        check++;
+    }
+}
+}
+if(check==2){
+    cout<<"The number is prime"<<endl;
+}else{
+    cout<<"the number is not the prime number"<<endl;
+}
+return -1;
+}
+int main() {
+   int num;
+    cin>>num;
+    cout<<isprime(num);
+    
+   
+}

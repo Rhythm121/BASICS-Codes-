@@ -1,0 +1,33 @@
+Q)gcd and  lcm of two number using ecludian formulas?
+
+code-
+#include <iostream>
+using namespace std;
+class GCDLCMCalculator{
+    
+public:
+int lcm(int a,int b){
+   int  result=(a*b)/gcd(a,b);
+    return result;
+}
+int gcd(int a,int b){
+     while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+};
+
+int main() {
+    GCDLCMCalculator calculator;
+    // Write C++ code here
+int num1;
+int num2;
+cin>>num1;
+cin>>num2;
+cout<<calculator.gcd(num1,num2)<<endl;
+cout<<calculator.lcm(num1,num2);
+return 0;
+}

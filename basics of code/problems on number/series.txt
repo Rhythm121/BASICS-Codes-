@@ -1,0 +1,64 @@
+Q)Os consider the following Series
+
+11 2 3 4 7 8 15 9 24 16 40 32 72 104 27
+
+This series is mixture of 3 series
+
+1)All the Prime position value are Power 0f 2 
+2)All Perfect square position are Power 0f 3. 
+3)All the Remaining Positions are sum of precious 2 values.
+
+eg:- 15th term in the series is 104
+
+code-#include <iostream>
+
+using namespace std;
+bool isprime(int N){
+    int check=0;
+    if(N==1){
+        return false;
+    }
+    for(int i=1;i<=N;i++){
+        if(N%i==0){
+            check=check+1;
+        }
+    }
+    if(check==2){
+        return true;
+    }else{
+        return false;
+    }
+  
+}
+
+bool isperfectsquare(int N){
+    for(int i=1;i<=N;i++){
+        if(i*i==N){
+          return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+ int N;
+ cin>>N;
+ int arr[N];
+ int powoftwo=1;
+ int powofthree=1;
+for(int i=1;i<=N;i++){
+    if(isprime(i)){
+        arr[i]=powoftwo;
+        powoftwo*=2;
+    }
+   else if(isperfectsquare(i)){
+        arr[i]=powofthree;
+        powofthree*=3;
+    }
+    else{
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+}
+    cout<<arr[N];
+    return 0;
+}
